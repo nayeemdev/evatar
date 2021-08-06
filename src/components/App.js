@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import '../assets/styles/App.css';
 import Evatar from './avatar/evatar';
 import Toolbar from './toolbar/toolbar';
