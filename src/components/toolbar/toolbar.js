@@ -1,14 +1,28 @@
-import React from 'react'
+// import { useSnapshot } from 'valtio';
 import '../../assets/styles/Toolbar.css';
+import { state } from '../../state/state';
+
+
+const handleDarkSkin = () => {
+    state.skinColor.right = "#aaab6e";
+    state.skinColor.left = " #727341";
+};
+
+function handleWhiteScin() {
+    state.skinColor.right = "#f0c087";
+    state.skinColor.left = "#e6af78";
+}
 
 function Toolbar() {
+    // const snap = useSnapshot(state);
+
     return(
         <div className="bar">
             <ul>
-                <li title="Skin Color" className="fa fa-adjust">
+                <li> Skin Color
                     <ul>
-                        <li title="White">White</li>
-                        <li title="Dark">Dark</li>
+                        <li onClick={ handleWhiteScin }>White</li>
+                        <li onClick={ handleDarkSkin }>Dark</li>
                     </ul>
                 </li>
                 <li title="link 2" className="fa fa-bullseye"></li>
